@@ -1,0 +1,45 @@
+.data-container {
+  @include flexAlignCenter(space-between);
+  margin: 0 auto;
+  margin-bottom: 40px;
+  &.vax {
+    justify-content: center;
+    .case {
+      min-width: 250px;
+    }
+  }
+  .case {
+    background-color: $color-dark;
+    padding: 10px 10px;
+    min-width: 230px;
+    &__icon {
+      svg {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    &__label {
+      font-weight: normal;
+      font-size: 1.6rem;
+      color: $color-white;
+      font-weight: 300;
+    }
+    &__number {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: $color-white;
+    }
+  }
+}
+
+@include responsive_tablet-mobile {
+  .data-container {
+    overflow-x: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    .case {
+      margin-right: 10px;
+    }
+  }
+}

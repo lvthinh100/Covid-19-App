@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+$color-primary: #630cf9;
+$color-secondary: #c365c9;
+
+$color-grad-1: #f3f2f2;
+$color-grad-2: #c6c6ff;
+
+$color-grey-light-1: #c3bfbc; // Light background
+$color-grey-light-2: #e7e7e7; // Light lines
+$color-grey-light-3: #c3bfbc; // Light text (placeholder)
+$color-grey-dark-1: #615551; // Normal text
+$color-grey-dark-2: #918581; // Lighter text
+
+$background-color: #151515;
+$color-dark: #101010; //For highlight Box
+
+$color-light-red: #cc4442;
+$color-light-yellow: #f89b36;
+
+$color-white: #fff;
+$color-text: #292740;
+
+$gradient: linear-gradient(to right bottom, $color-grad-2, $color-grad-1);
+$gradient-2: linear-gradient(to right bottom, #f4f2f2, #d4d5ff);
+
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Roboto", Times, serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: $color-white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 2 * 4vw);
+}
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-dark;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.container {
+  max-width: 120rem;
+  width: 100%;
+  // min-height: 117rem;
+  margin: 1vw auto;
+  background-color: transparent;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba($color-grey-dark-1, 0.2);
+
+  // display: grid;
+  // grid-template-rows: 10rem minmax(100rem, auto);
+  // grid-template-columns: 1fr 2fr;
+  // grid-template-areas:
+  //   "head head"
+  //   "list recipe";
+
+  @media only screen and (max-width: $bp-large) {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+.app {
+  overflow: hidden;
+  position: relative;
+  background-color: $background-color;
+  scroll-behavior: smooth;
+}
+
+//Responsive

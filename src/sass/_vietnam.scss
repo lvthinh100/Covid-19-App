@@ -1,0 +1,49 @@
+.vietnam {
+  &__table {
+    max-height: 550px;
+    width: fit-content;
+    overflow-y: scroll;
+    display: flex;
+    margin: 0 auto;
+    table {
+      position: relative;
+      border-left: 1px solid $color-dark;
+      tr:first-child {
+        position: sticky;
+        top: 0;
+        background: white;
+      }
+      th {
+        color: $color-light-red;
+        background-color: $color-dark;
+        padding: 16px 18px;
+        font-size: 1.8rem;
+      }
+      td {
+        color: white;
+        font-size: 1.5rem;
+        padding: 5px 18px;
+      }
+      tr:nth-child(even) {
+        background-color: #272727;
+      }
+    }
+  }
+  &__chart {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+    canvas {
+      margin: 10px 0;
+    }
+  }
+}
+
+@include responsive_tablet-mobile {
+  .vietnam {
+    &__chart {
+      width: 80%;
+    }
+  }
+}

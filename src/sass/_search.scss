@@ -1,0 +1,139 @@
+.search {
+  background-color: $background-color;
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+  width: 80vw;
+  &__heading {
+    color: $color-white;
+  }
+  &__form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    &-control {
+      padding: 10px;
+      background-color: transparent;
+      color: $color-white;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .dropdown {
+      &__link {
+        border: 1px solid $color-white;
+        border-radius: 45px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        svg {
+          fill: $color-white;
+          margin-right: 15px;
+        }
+      }
+      &__menu {
+        background-color: $color-dark;
+        width: 100%;
+        border: 1px solid $color-grey-light-3;
+        border-radius: 10px;
+        max-height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        li {
+          &:first-child {
+            option {
+              border-radius: 10px 10px 0 0;
+            }
+          }
+          &:last-child {
+            option {
+              border-radius: 0 0 10px 10px;
+            }
+          }
+        }
+      }
+      option {
+        color: $color-white;
+        font-size: 1.4rem;
+        text-align: left;
+        padding: 3px 10px;
+        &:hover {
+          background-color: $color-light-red;
+        }
+        &.active {
+          background-color: $color-light-red;
+        }
+      }
+    }
+    .btn {
+      margin-left: 50px;
+      cursor: pointer;
+    }
+    &--vac {
+      margin-bottom: 30px;
+    }
+  }
+  &__data {
+    margin-top: 20px;
+    min-height: 60vh;
+    .country {
+      color: $color-white;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  }
+  &__container {
+    flex-direction: column;
+    .case {
+      margin-bottom: 5px;
+      text-align: left;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .message {
+    color: $color-light-yellow;
+    font-size: 2rem;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@include responsive_mobile {
+  .search {
+    width: 100%;
+    &__container {
+      flex-direction: row;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+@include responsive_tablet {
+  .search {
+    width: 100%;
+    // &__container {
+    //   flex-direction: row;
+    // }
+  }
+}

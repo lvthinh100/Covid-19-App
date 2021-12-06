@@ -1,0 +1,27 @@
+{
+  "name": "covid-19-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^3.6.0",
+    "core-js": "^3.19.1",
+    "moment": "^2.29.1",
+    "regenerator-runtime": "^0.13.9",
+    "svgmap": "^2.7.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-nightly.425",
+    "parcel-plugin-html-externals": "^0.3.0",
+    "sass": "^1.43.4"
+  },
+  "externals": {
+    "vendor/**/*": false
+  }
+}

@@ -1,0 +1,18 @@
+@mixin clearButton() {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+@mixin maxTextLine($line) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+
+@mixin flexAlignCenter($justify: flex-start) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}

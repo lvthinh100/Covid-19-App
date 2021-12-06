@@ -1,0 +1,106 @@
+$header-height: 70px;
+.header {
+  @include flexAlignCenter(space-between);
+  height: $header-height;
+  // padding: 0 30px;
+  &__logo {
+    @include flexAlignCenter();
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+    span {
+      color: $color-white;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-left: 12px;
+    }
+  }
+  &__container {
+    position: fixed;
+    width: 100%;
+    background-color: $background-color;
+    z-index: 100;
+  }
+
+  &__nav {
+    @include flexAlignCenter(space-between);
+    li {
+      margin-left: 10px;
+      list-style: none;
+      .link {
+        position: relative;
+        text-decoration: none;
+        color: $color-white;
+        padding: 10px 15px;
+        font-size: 1.5rem;
+        text-align: center;
+        &:hover,
+        &.active {
+          background-color: $color-dark;
+          &::after {
+            width: calc(100% + 0px);
+          }
+        }
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          width: 0px;
+          height: 2px;
+          background-color: $color-light-red;
+          transition: all 0.2s linear;
+          bottom: -2px;
+        }
+        &--highlight {
+          text-decoration: none;
+          color: $color-white;
+          padding: 8px 30px;
+          font-size: 1.5rem;
+          text-align: center;
+          background-color: $color-light-red;
+          border-radius: 45px;
+        }
+      }
+    }
+  }
+  &__mobile-icon {
+    display: none;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@include responsive_tablet-mobile {
+  .header {
+    &__nav {
+      display: none;
+      &--mobile {
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        padding-top: $header-height;
+        .link {
+          display: block;
+          text-decoration: none;
+          color: $color-white;
+          padding: 12px 15px;
+          font-size: 1.5rem;
+          text-align: center;
+          background-color: $color-dark;
+          width: 100%;
+        }
+        .btn {
+          display: block;
+          border-radius: 0;
+        }
+      }
+    }
+    &__mobile-icon {
+      display: block;
+    }
+  }
+}

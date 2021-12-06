@@ -1,0 +1,14 @@
+.global {
+  .data-container {
+    margin-bottom: 0;
+  }
+  &__chart-container {
+    margin: 0 auto;
+  }
+}
+#world_map {
+  width: 100%;
+  background-color: $color-dark;
+  //   border: 1px solid $color-grey-light-3;
+  margin-top: 30px;
+}

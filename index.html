@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid App</title>
+    <link rel="stylesheet" href="./src/sass/main.scss" />
+    <link rel="stylesheet" href="./src/sass/grid.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <div class="header__container">
+        <nav class="grid wide">
+          <nav class="header">
+            <div class="header__logo">
+              <svg>
+                <use href="src/img/icons.svg#icon-virus"></use>
+              </svg>
+              <span>Covid - 19</span>
+            </div>
+            <ul class="header__nav">
+              <li>
+                <a class="link" href="#overview">Overview</a>
+              </li>
+              <li>
+                <a class="link" href="#vietnam">Vietnam</a>
+              </li>
+              <li>
+                <a class="link" href="#global">Global</a>
+              </li>
+              <li>
+                <a class="link" href="#vaccination">Vaccination</a>
+              </li>
+              <li>
+                <a class="btn" data-show="1" href="#">Search</a>
+              </li>
+            </ul>
+            <div class="header__mobile-icon" data-show="2">
+              <svg>
+                <use href="src/img/icons.svg#icon-mobile-menu"></use>
+              </svg>
+            </div>
+            <div class="modal hidden" data-modal="2">
+              <div class="modal__overlay" data-show="2"></div>
+              <div class="modal__content" data-show="2">
+                <ul class="header__nav--mobile">
+                  <li>
+                    <a class="link" href="#overview" data-show="2">Overview</a>
+                  </li>
+                  <li>
+                    <a class="link" href="#vietnam" data-show="2">Vietnam</a>
+                  </li>
+                  <li>
+                    <a class="link" href="#global" data-show="2">Global</a>
+                  </li>
+                  <li>
+                    <a class="link" href="#vaccination" data-show="2"
+                      >Vaccination</a
+                    >
+                  </li>
+                  <li>
+                    <a class="btn" data-show="1" href="#">Search</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </nav>
+      </div>
+      <!-- End header -->
+
+      <!-- Overview -->
+      <div class="grid wide">
+        <div class="infor section" id="overview">
+          <div class="grid">
+            <div class="row">
+              <div class="col m-12 l-6 c-12">
+                <div class="infor__text">
+                  <h4>Corona Virus Pandemic</h4>
+                  <h1>Stay Home</h1>
+                  <h1>Stay Safe</h1>
+                  <div class="line"></div>
+                  <p>
+                    The 2019 novel coronavirus (2019-nCoV), officially named as
+                    COVID-19 pandemic by the WHO, has spread to more than 180
+                    countries including Vietnam
+                  </p>
+                </div>
+              </div>
+              <div class="col m-12 l-6 c-12">
+                <div class="infor__img">
+                  <img
+                    src="./src/img/—Pngtree—hand drawn 2019 new corona_5329322.png"
+                    alt="Covid-19"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="section section--vietnam vietnam" id="vietnam">
+          <div class="section__heading">
+            <h1>Vietnam Stats</h1>
+            <span>(The spread of Covid-19 across Vietnam)</span>
+          </div>
+          <div class="section__content vietnam-content">
+            <div class="data-container">
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-infected"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Total Case</div>
+                      <div class="case__number vietnam-case"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-death"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Total Death</div>
+                      <div class="case__number vietnam-death"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-treated"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Being treated</div>
+                      <div class="case__number vietnam-treated"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-recovered"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Recovered</div>
+                      <div class="case__number vietnam-recovered"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid wide">
+              <!-- Code for chart  -->
+              <div class="row">
+                <div class="col l-6 m-12 c-12">
+                  <div class="vietnam__table table-vietnam"></div>
+                </div>
+                <div class="col l-6 m-12 c-12">
+                  <div class="vietnam__chart">
+                    <canvas id="chart__cases"></canvas>
+                  </div>
+                  <div class="vietnam__chart">
+                    <canvas id="chart__death"></canvas>
+                  </div>
+                  <div class="vietnam__chart">
+                    <canvas id="chart__recovered"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="global">
+          <div class="section__heading">
+            <h1>Global Stats</h1>
+            <span>(The spread of Covid-19 over the world)</span>
+          </div>
+          <div class="section__content global">
+            <div class="data-container">
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-infected"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Total Case</div>
+                      <div class="case__number global-case"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-death"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Total Death</div>
+                      <div class="case__number global-death"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-treated"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Being treated</div>
+                      <div class="case__number global-treated"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-recovered"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Recovered</div>
+                      <div class="case__number global-recovered"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="world_map"></div>
+            <div class="global__chart-container">
+              <canvas id="global__chart"> </canvas>
+            </div>
+          </div>
+        </section>
+        <section class="section section__vaccine" id="vaccination">
+          <div class="section__heading">
+            <h1>Vaccination</h1>
+            <span>The effort of the world against Covid-19</span>
+          </div>
+          <div class="section__content">
+            <div class="data-container vax">
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-vaccine"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Total Vaccine rollout</div>
+                      <div class="case__number vax__data">123456</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="search__form search__form--vac">
+              <div class="dropdown" data-dropdown>
+                <div class="dropdown__link" data-dropdown-button>
+                  <input
+                    readonly="readonly"
+                    type="text"
+                    class="search__form-control input-vax"
+                    required
+                    name="country"
+                    value="Vietnam"
+                    data-iso2="VN"
+                  />
+                  <svg>
+                    <use href="src/img/icons.svg#icon-down-arrow"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown__menu dropdown__menu--vax">
+                  <li class="dropdown__option">
+                    <option value="Vietnam">Vietnam</option>
+                  </li>
+                  <li class="dropdown__option">
+                    <option value="Lao">Lao</option>
+                  </li>
+                  <li class="dropdown__option">
+                    <option value="Cambodia">Cambodia</option>
+                  </li>
+                </ul>
+              </div>
+              <input type="submit" value="search" name="submit" class="btn" />
+            </form>
+            <div class="data-container vax search__vax">
+              <div class="case">
+                <div class="grid">
+                  <div class="row sm-gutter">
+                    <div class="col m-4">
+                      <div class="case__icon">
+                        <svg>
+                          <use href="src/img/icons.svg#icon-vaccine"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col m-8">
+                      <div class="case__label">Total Vaccine rollout</div>
+                      <div class="case__number">123456</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="modal modal--search hidden" data-modal="1">
+          <div class="modal__overlay" data-show="1"></div>
+          <div class="modal__content">
+            <div class="search">
+              <h1 class="search__heading">
+                Search for Covid-19 data in country
+              </h1>
+
+              <form class="search__form search__form--covid">
+                <div class="dropdown" data-dropdown>
+                  <div class="dropdown__link" data-dropdown-button>
+                    <input
+                      readonly="readonly"
+                      type="text"
+                      class="search__form-control input-country"
+                      required
+                      name="country"
+                      value="Vietnam"
+                      data-iso2="VN"
+                    />
+                    <svg>
+                      <use href="src/img/icons.svg#icon-down-arrow"></use>
+                    </svg>
+                  </div>
+                  <ul class="dropdown__menu dropdown__menu--country">
+                    <li class="dropdown__option">
+                      <option value="Vietnam">Vietnam</option>
+                    </li>
+                    <li class="dropdown__option">
+                      <option value="Lao">Lao</option>
+                    </li>
+                    <li class="dropdown__option">
+                      <option value="Cambodia">Cambodia</option>
+                    </li>
+                  </ul>
+                </div>
+                <input type="submit" value="search" name="submit" class="btn" />
+              </form>
+
+              <div class="search__data">
+                <div class="message">
+                  <p>Search for Covid-19 data :)</p>
+                </div>
+              </div>
+              <button class="search__close" data-show="1">
+                <svg>
+                  <use href="src/img/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section footer">
+        <h1 class="footer__heading">Follow me on</h1>
+        <div class="footer__icon">
+          <a
+            href="https://www.instagram.com/thinh_lee.2950/"
+            target="_blank"
+            class="footer__link"
+          >
+            <svg>
+              <use href="src/img/icons.svg#icon-insta"></use>
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100010784447640"
+            target="_blank"
+            class="footer__link"
+          >
+            <svg>
+              <use href="src/img/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+          <a href="mailto:levanthinh2509@gmail.com" class="footer__link">
+            <svg>
+              <use href="src/img/icons.svg#icon-gmail"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__hcmus">
+          <img src="./src/img/hcmus1.png" alt="" />
+        </div>
+        <span class="footer__message"
+          >This is my personal project. Please do not use for commercial
+          purposes</span
+        >
+      </section>
+    </div>
+  </body>
+  <script defer src="./src/js/controller.js"></script>
+</html>

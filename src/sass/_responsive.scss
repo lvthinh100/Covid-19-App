@@ -1,0 +1,22 @@
+//Responsive
+
+$res_mobile: "(max-width: 46.1875em)";
+$res_tablet: "(min-width: 46.25em) and (max-width: 64.9375em)";
+
+@mixin responsive_mobile() {
+  @media #{$res_mobile} {
+    @content;
+  }
+}
+
+@mixin responsive_tablet() {
+  @media #{$res_tablet} {
+    @content;
+  }
+}
+
+@mixin responsive_tablet-mobile {
+  @media (max-width: 64.9375em) {
+    @content;
+  }
+}
