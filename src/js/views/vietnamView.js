@@ -1,6 +1,6 @@
 import View from "./view.js";
 import icons from "url:../../img/icons.svg";
-import { Chart } from "chart.js";
+import Chart from "chart.js/auto";
 import { COLOR } from "../config.js";
 import { formatNumber } from "../helpers.js";
 
