@@ -1,4 +1,4 @@
-import View from "./view.js";
+import View from "./View.js";
 import { formatNumber } from "../helpers.js";
 import svgMap from "svgmap";
 import "svgmap/dist/svgMap.min.css";

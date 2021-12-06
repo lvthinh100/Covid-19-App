@@ -1,4 +1,4 @@
-import View from "./view.js";
+import View from "./View.js";
 import icons from "url:../../img/icons.svg";
 import Chart from "chart.js/auto";
 import { COLOR } from "../config.js";
