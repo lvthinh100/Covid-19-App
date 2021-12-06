@@ -73,8 +73,8 @@ class globalView extends View {
         values: values,
       },
       minZoom: 0.8,
-      maxZoom: 1.2,
-      initialZoom: 0.8,
+      maxZoom: 2,
+      initialZoom: 1,
       colorNoData: "#c3bfbc",
     });
 
