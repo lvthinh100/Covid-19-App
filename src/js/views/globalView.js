@@ -2,7 +2,7 @@ import View from "./view.js";
 import { formatNumber } from "../helpers.js";
 import svgMap from "svgmap";
 import "svgmap/dist/svgMap.min.css";
-import { Chart } from "chart.js";
+import Chart from "chart.js/auto";
 import { COLOR } from "../config.js";
 import moment from "moment";
 

@@ -1,5 +1,6 @@
 import { TIMEOUT_SEC, covidDay } from "./config.js";
 import moment from "moment";
+import { async } from "regenerator-runtime";
 
 export const timeout = function (s) {
   return new Promise(function (_, reject) {

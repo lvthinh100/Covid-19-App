@@ -1,4 +1,3 @@
-import { async } from "regenerator-runtime";
 import * as model from "./model.js";
 import globalView from "./views/globalView.js";
 import vietnamView from "./views/vietnamView.js";
@@ -7,6 +6,9 @@ import dropdownView from "./views/dropdownView.js";
 import modalView from "./views/modalView.js";
 import UI from "./views/effectView.js";
 import vaccineView from "./views/vaccineView.js";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import { async } from "regenerator-runtime";
 
 const controlUpdateVietnamData = async function () {
   try {
